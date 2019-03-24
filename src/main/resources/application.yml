@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gyq-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/geyingqi777/geyingqi-spring-cloud-config-server.git
+          username: geyinqi777
+          password: 这里写自己的password
+          # 这里写成’{profile}’是为了能让后面的服务在不同环境下动态的去获得相对应的目录下的配置环境
+          search-paths: spring-cloud-config
+          default-label: master
+server:
+  port: 9999
